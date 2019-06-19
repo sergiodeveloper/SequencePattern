@@ -19,7 +19,7 @@ public class NotEqualToAnyPattern<E> extends Pattern<E> {
 					return Arrays.asList();
 				}
 			}
-			return new ElementSequence<>(new ElementSequence<>(element.get(0)));
+			return new ElementSequence<ElementSequence<E>>(new ElementSequence<E>(element.get(0)));
 		}
 		return Arrays.asList();
 	}

@@ -16,7 +16,7 @@ public class EqualToAnyPattern<E> extends Pattern<E> {
 		if (!element.isEmpty()) {
 			for (E e : this.elements) {
 				if (e.equals(element.get(0))) {
-					return new ElementSequence<>(new ElementSequence<>(element.get(0)));
+					return new ElementSequence<ElementSequence<E>>(new ElementSequence<>(element.get(0)));
 				}
 			}
 		}

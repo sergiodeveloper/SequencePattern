@@ -23,7 +23,7 @@ public class NotAnyClassPattern<E> extends Pattern<E> {
 			}
 		}
 
-		return new ElementSequence<>(new ElementSequence<>(element.get(0)));
+		return new ElementSequence<ElementSequence<E>>(new ElementSequence<>(element.get(0)));
 	}
 
 	@Override

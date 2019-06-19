@@ -16,7 +16,7 @@ public class AnyClassPattern<E> extends Pattern<E> {
 		if (!element.isEmpty()) {
 			for (Class<? extends E> e : this.elementClasses) {
 				if (e.isInstance(element.get(0))) {
-					return new ElementSequence<>(new ElementSequence<>(element.get(0)));
+					return new ElementSequence<ElementSequence<E>>(new ElementSequence<>(element.get(0)));
 				}
 			}
 		}
